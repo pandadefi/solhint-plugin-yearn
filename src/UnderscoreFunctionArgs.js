@@ -26,7 +26,7 @@ class UnderscoreFunctionArgs {
     
     node.parameters.forEach(parameter => {
       if (!parameter.name.startsWith('_')) {
-        this.reporter.error(parameter, this.ruleId, 'Function param name must start with _')
+        this.reporter.error(parameter, this.ruleId, `Function param "${parameter.name}" name must start with _`)
       }
     })
   }
